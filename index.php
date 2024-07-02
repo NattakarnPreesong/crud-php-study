@@ -42,7 +42,7 @@ $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         echo "
-                        <thead class='text-white'>
+                        <thead class='text-white underline'>
                         <tr>
                         <td scope='col' class='px-6 py-3'>" . $row["Id"] . "</td>
                         <td scope='col' class='px-6 py-3'>" . $row["Name"] . "</td>
