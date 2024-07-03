@@ -22,9 +22,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Create User</title>
+     <!-- Tailwind CSS via CDN -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-    <h2>Create New User</h2>
+<body class="bg-gray-900">
+    <h2 class="flex justify-center text-white text-3xl font-bold">Create New User</h2>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
         Name: <input type="text" name="name" required><br>
         Email: <input type="email" name="email" required><br>
