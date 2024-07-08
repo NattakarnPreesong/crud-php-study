@@ -25,9 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Edit User</title>
+    <!-- Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/b5d6653424.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <h2>Edit User</h2>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF'] . '?id=' . $id; ?>">
@@ -38,4 +44,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
     <a href="index.php">Back to List</a>
 </body>
+
 </html>

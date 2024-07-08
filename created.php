@@ -5,8 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $age = $_POST["age"];
+    $age = $_POST["age"];
+    $age = $_POST["age"];
+    $age = $_POST["age"];
+    $age = $_POST["age"];
 
-    $sql = "INSERT INTO Users (Name, Email, Age) VALUES ('$name', '$email', '$age')";
+    $sql = "INSERT INTO products (Product_Name, Product_Picture, Product_Category, Product_Description, Product_Price, Quantity_Stock) VALUES ('$name', '$email', '$age')";
 
     if ($conn->query($sql) === TRUE) {
         header("Location: index.php");
@@ -20,19 +24,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>Create User</title>
-     <!-- Tailwind CSS via CDN -->
-     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Add a Product</title>
 </head>
-<body class="bg-gray-900">
-    <h2 class="flex justify-center text-white text-3xl font-bold">Create New User</h2>
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-        Name: <input type="text" name="name" required><br>
-        Email: <input type="email" name="email" required><br>
-        Age: <input type="number" name="age" required><br>
-        <input type="submit" value="Create">
-    </form>
-    <a href="index.php">Back to list</a>
+
+<body>
+    <h2>Add a new product</h2>
+    <div  method="post">
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>">
+            ชื่อสินค้า: <input type="text" name="name" required><br>
+            รูปสินค้า: <input type="file" name="email" required><br>
+            ประเภทสินค้า: <input type="text" name="age" required><br>
+            รายละเอียดสินค้า: <input type="text" name="age" required><br>
+            ราคาสินค้า: <input type="number" name="age" required><br>
+            จำนวนสินค้า: <input type="number" name="age" required><br>
+            <input type="submit" value="Create">
+        </form>
+        <a href="index.php">Back to list</a>
+    </div>
 </body>
+
 </html>
